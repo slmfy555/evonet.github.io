@@ -210,7 +210,7 @@ d3.csv(url)
 			.append("div")
 			.classed("grid-item", true);
 
-	    div.append("img").attr("src", (d) => "/img/" + d.image + ".png");
+	    div.append("img").attr("src", (d) => "/img/" + d.image + ".PNG");
 	    div.append("h3").text((d) => d.Title);
 	    div.append("span").html((d) =>
 	        [
