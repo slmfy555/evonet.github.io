@@ -1,0 +1,255 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Evolution Visualization</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://d3js.org/d3.v5.min.js"></script>
+		<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+		<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+	</head>
+	<body>
+        <div id="h">
+            <div id="head1"  style="width:950px;height:73px;float:left;">
+                <h1 style="height:50px;padding:5px 0;">
+                    <a id="indexa" href="index.html" style="height:73px">Evovis - A Visual Bibliography of Evolution Visualization</a>
+                </h1>
+            </div>
+            <p id="related"  style="width:200px;height:20px;float:right;padding:50px 30px 1px;">
+                <a id="relateda" href="Related.html">Related Projects</a>
+            </p>
+        </div>
+    
+		<div class="grid-container">
+            <div id="controls">
+                
+                <h3 id="h3_data">Data Type and Source</h3>
+                <div id="filters_data">
+                    <select  class="demo" multiple="multiple">
+                        <optgroup label="DataType">
+                            <option value="Time serials">Time serials</option>
+                            <option value="Record Data">Record Data</option>
+                            <option value="Network">Network</option>
+                            <option value="Vector Data">Vector Data</option>
+                            <option value="Geospatial Data">Geospatial Data</option>
+                            <option value="Square Cylinder Data">Square Cylinder Data</option>
+                            <option value="Spatio-Temporal Data">Spatio-Temporal Data</option>
+                            <option value="Prediction Data">Prediction Data</option>
+                            <option value="Event Sequence Data">Event Sequence Data</option>
+                            <option value="High Dimensional Data">High Dimensional Data</option>
+                            <option value="None">None</option>
+                        </optgroup>
+                        <optgroup label="DataSource">
+                            <option value="Open source data">Open Source Data</option>
+                            <option value="Computer Simulation">Computer Simulation</option>
+                            <option value="Business company data">Business Company Data</option>
+                            <option value="the FIFA World Cup Competition">The FIFA World Cup Competition</option>
+                            <option value="visualization applet">Visualization Applet</option>
+                            <option value="ECMWF">ECMWF</option>
+                            <option value="the SciVis 2016 Contest organizers">The SciVis 2016 Contest Organizers</option>
+                            <option value="EU Copernicus project">EU Copernicus Project</option>
+                            <option value="Bank">Bank</option>
+                            <option value="time varying stochastic fractal">Time Varying Stochastic Fractal</option>
+                        </optgroup>   
+                    </select>  
+                </div>
+                <h3 id="h3_publication">Publication</h3>
+                <div id="filters_publication">
+                        <select class="demo" multiple="multiple">
+                            <optgroup label="Conference">
+                                <option value="Vis">Vis</option>
+                                <option value="InfoVis">InfoVis</option>
+                                <option value="VAST">VAST</option>
+                                <option value="PacificVis">PacificVis</option>
+                                <option value="SciVis">SciVis</option>
+                                <option value="EuroVis">EuroVis</option>
+                            </optgroup>
+                            <optgroup label="PaperType">
+                                <option value="C">Conference</option>
+                                <option value="J">Journal Article</option>
+                            </optgroup>  
+                        </select>
+                </div>
+                <h3 id="h3_evoaims">Evolution Aimes</h3>
+                <div id="filters_evoaims">
+                    <select class="demo" multiple="multiple">
+                        <optgroup label="Evolution_Aimes">
+                            <option value="visualization analysis">Visualization Analysis</option>
+                            <option value="Time-Feature Extraction">Time-Feature Extraction</option>
+                            <option value="visual forecast">Visual Forecast</option>
+                            <option value="network visualization analysis">Network Visualization Analysis</option>
+                            <option value="solve discontinuous nature of the data">Solve Discontinuous Nature Of The Data</option>
+                            <option value="hypertext field">Hypertext Field</option>
+                            <option value="smooth discretized surfaces">Smooth Discretized Surfaces</option>
+                            <option value="flow visualization analysis">Flow Visualization Analysis</option>
+                            <option value="Wavelet analysis">Wavelet Analysis</option>
+                            <option value="steamline visualization analysis">Steamline Visualization Analysis</option>
+                            <option value="Hierarchical topic visualization">Hierarchical Topic Visualization</option>
+                            <option value="tensor Visualization analysis">Tensor Visualization Analysis</option>
+                            <option value="Cluster detection analysis">Cluster Detection Analysis</option>
+                            <option value="Evolutionary Algorithm analysis">Evolutionary Algorithm Analysis</option>
+                            <option value="uncertainty information analysis">Uncertainty Information Analysis</option>
+                            <option value="Time-varying data analysis">Time-varying Data Analysis</option>
+                            <option value="Bitcoin transaction analysis">Bitcoin Transaction Analysis</option>
+                            <option value="Scientific Fields">Scientific Fields</option>
+                            <option value="Topological Data Analysis">Topological Data Analysis</option>
+                            <option value="Storyline visualization analysis">Storyline Visualization Analysis</option>
+                            <option value="Evolutionary Visual Exploration">Evolutionary Visual Exploration</option>
+                            <option value="Cosmological N-body Simulation Analysis">Cosmological N-body Simulation Analysis</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <h3 id="h3_evotype">Evolution Types</h3>
+                <div id="filters_evotype">
+                    <select class="demo" multiple="multiple">
+                        <optgroup label="Evolution_Types">
+                            <option value="Time Evolution">Time Evolution</option>
+                            <option value="Network Evolution">Network Evolution</option>
+                            <option value="Feature Evolution">Feature Evolution</option>
+                            <option value="Data Evolution">Data Evolution</option>
+                            <option value="Structural Evolution">Structural Evolution</option>
+                            <option value="Dynamic Tree Evolution">Dynamic Tree Evolution</option>
+                            <option value="Models Evolution">Models Evolution</option>
+                            <option value="Field Evolution">Field Evolution</option>
+                            <option value="Clustering Evolution">Clustering Evolution</option>
+                            <option value="geometric evolution">Geometric Evolution</option>
+                            <option value="Space Evolution">Space Evolution</option>
+                            <option value="Evolutionary Trees">Evolutionary Trees</option>
+                            <option value="Evolution View">Evolution View</option>
+                            <option value="Three Dimensional Evolution">Three Dimensional Evolution</option>
+                            <option value="Group Evolution">Group Evolution</option>
+                            <option value="Topological Evolution">Topological Evolution</option>
+                            <option value="Topic Evolution">Topic Evolution</option>
+                            <option value="Uncertainty Evolution">Uncertainty Evolution</option>
+                            <option value="Flow Evolution">Flow Evolution</option>
+                            <option value="Dynamic Evolution">Dynamic Evolution</option>
+                            <option value="Spatiotemporal Evolution">Spatiotemporal Evolution</option>
+                            <option value="Plots Evolution">Plots Evolution</option>
+                            <option value="Interactive Evolutionary">Interactive Evolutionary</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <h3 id="h3_Visualisation">Visual Technology</h3>
+                <div id="filters_Visualisation">
+                    <select class="demo" multiple="multiple">
+                        <optgroup label="Dimension">
+                            <option value="2D">2D</option>
+                            <option value="3D">3D</option>
+                            <option value="Hybrid">Hybrid</option>
+                        </optgroup>
+                        <optgroup label="Visualisation">
+                            <option value="3D Visualization">3D Visualization</option>
+                            <option value="Tree map">Tree map</option>
+                            <option value="Flow Visualization">Flow Visualization</option>
+                            <option value="Timeline">Timeline</option>
+                            <option value="Animations">Animations</option>
+                            <option value="Graph">Graph</option>
+                            <option value="Maps">Maps</option>
+                            <option value="Heatmap">Heatmap</option>
+                            <option value="Clusters">Clusters</option>
+                            <option value="Direct volume rendering">Direct volume rendering</option>
+                            <option value="SOM">SOM</option>
+                            <option value="Pathfinder network scaling techniques">Pathfinder network scaling techniques</option>
+                            <option value="Multiscale Visualization">Multiscale Visualization</option>
+                            <option value="The node-link graph">The node-link graph</option>
+                            <option value="Lattice Boltzmann Model">Lattice Boltzmann Model</option>
+                            <option value="Network Visualization">Network Visualization</option>
+                            <option value="3D Morphing">3D Morphing</option>
+                            <option value="Treemaps">Treemaps</option>
+                            <option value="Tree Visualization">Tree Visualization</option>
+                            <option value="Spatial Graphs">Spatial Graphs</option>
+                            <option value="Spiral Axis">Spiral Axis</option>
+                            <option value="Direct Point Visualization">Direct Point Visualization</option>
+                            <option value="Scatterplot">Scatterplot</option>
+                            <option value="Point Map">Point Map</option>
+                            <option value="Histogram">Histogram</option>
+                            <option value="Bar Chart">Bar Chart</option>
+                            <option value="Layered Graph">Layered Graph</option>
+                            <option value="Set Diagrams">Set Diagrams</option>
+                            <option value="Force-directed graph">Force-directed graph</option>
+                            <option value="None">None</option>
+                        </optgroup>
+                        <optgroup label="Interaction">
+                            <option value="Select">Select</option>
+                            <option value="Explore">Explore</option>
+                            <option value="Filter">Filter</option>
+                            <option value="Connect">Connect</option>
+                            <option value="Reconfigure">Reconfigure</option>
+                            <option value="Encode">Encode</option>
+                            <option value="Abstract">Abstract</option>
+                            <option value="Elaborate">Elaborate</option>
+                            <option value="Zoom">Zoom</option>
+                            <option value="None">None</option>
+                        </optgroup>
+
+                    </select>
+                </div>
+                <h3 id="h3_machine">Machine Learning</h3>
+                <div id="filters_machine">
+                    <select class="demo" multiple="multiple">
+                        <optgroup label="Machine_Learning">
+                            <option value="T-SNE">T-SNE</option>
+                            <option value="GMM">GMM</option>
+                            <option value="K-Means">K-Means</option>
+                            <option value="Vortex Core Tracing Algorithm">Vortex Core Tracing Algorithm</option>
+                            <option value="steepest descent algorithm">Steepest Descent Algorithm</option>
+                            <option value="Stochastic Search Techniques">Stochastic Search Techniques</option>
+                            <option value="SOM">SOM</option>
+                            <option value="MDS">MDS</option>
+                            <option value="Pathfinder networks">Pathfinder Networks</option>
+                            <option value="Boids">Boids</option>
+                            <option value="Horn's algorithm">Horn's Algorithm</option>
+                            <option value="Majority Vote Algorithm">Majority Vote Algorithm</option>
+                            <option value="SPH">SPH</option>
+                            <option value="Molecule Cluster Detection Algorithm">Molecule Cluster Detection Algorithm</option>
+                            <option value="Region Growing paradigm">Region Growing Paradigm</option>
+                            <option value="DBSCAN">DBSCAN</option>
+                            <option value="TF-IDF">TF-IDF</option>
+                            <option value="FR">FR</option>
+                            <option value="GA">GA</option>
+                            <option value="Max-product">Max-product</option>
+                            <option value="TRT">TRT</option>
+                            <option value="Region Growing">Region Growing</option>
+                            <option value="AHC">AHC</option>
+                            <option value="k-clique">k-clique</option>
+                            <option value="HMM">HMM</option>
+                            <option value="Farneback">Farneback</option>
+                            <option value="Adaptive Ranking Algorithm">Adaptive Ranking Algorithm</option>
+                            <option value="UMAP">UMAP</option>
+                            <option value="Hash Algorithms">Hash Algorithms</option>
+                            <option value="GO-NTG">GO-NTG</option>
+                            <option value="PCA">PCA</option>
+                            <option value="Fuzzy Rule-based Pattern Learning Algorithm">Fuzzy Rule-based Pattern Learning Algorithm</option>
+                            <option value="XGBoost">XGBoost</option>
+                            <option value="None">None</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <br />
+                <div style="text-align:center">
+                    <div class="el-input" style="width: 192.29px; height: 27.2px; text-align:center">
+                        <input type="text" id="search"autocomplete="off" placeholder="search" class="input_search" style="width:192px;">
+                    </div>
+                </div>
+                <br />
+                <div style="text-align:center">
+                ( Numbers of techniques:<span id="count"></span> )
+                </div>
+                
+            </div>
+            <div id="container" class="grid"></div>
+		</div>
+		<script type="text/javascript" src="script.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/fSelect.js"></script>
+        <script>
+$(function() {
+        $('.demo').fSelect();
+    });
+</script>
+	</body>
+</html>
