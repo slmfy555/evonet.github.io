@@ -120,7 +120,9 @@ const taxonomy = {
             "Compression domain rendering of time-resolved volume data",
             "The topology of symmetric, second-order tensor fields",
             "3D visualization of unsteady 2D airplane wake vortices",
-            "Visualizing chemical kinetics in fractal domains"]
+            "Visualizing chemical kinetics in fractal domains",
+            "A visual analytics approach for understanding egocentric intimacy network evolution and impact propagation in MMORPGs"
+    ]
 };
 const taxkeys = Object.keys(taxonomy);
 const container = d3.select(".grid");
